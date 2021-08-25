@@ -4,6 +4,35 @@
     <rect x="-10" y="7.5" width="20" height="5" fill="black" />
     <rect x="7.5" y="-10" width="5" height="20" fill="black" />
   </mask>
+  <style>
+    .logo_path:nth-child(1) {
+      --length: 152.826;
+      animation-delay: 0.3s;
+    }
+    .logo_path:nth-child(2) {
+      --length: 105.696;
+    }
+    .logo_path:nth-child(3) {
+      --length: 132.826;
+      animation-delay: 0.3s;
+    }
+    .logo_path:nth-child(4) {
+      --length: 85.696;
+    }
+    .logo_path {
+      stroke-dasharray: var(--length);
+      stroke-dashoffset: var(--length);
+      animation: stroke 1s ease forwards;
+    }
+    @keyframes stroke {
+      from {
+        stroke-dashoffset: var(--length);
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
   <g transform="scale(0.8) rotate(-45)">
     <path
       class="logo_path"
